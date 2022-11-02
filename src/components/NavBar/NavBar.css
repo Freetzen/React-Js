@@ -1,0 +1,30 @@
+.headerNav{
+    background-color: #282c34;
+
+}
+
+.NavBarContainer{
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center
+}
+
+.logoNavBar{
+    width: 150px;
+    height: 90px;
+}
+
+.divLista ul a{
+                    text-decoration: none;
+                    color: white;
+                    font-size: 15px;
+                    text-align: center;
+                    list-style:none;
+                    padding: 10px;
+}
+
+.ulLista{
+    display: flex;
+}
