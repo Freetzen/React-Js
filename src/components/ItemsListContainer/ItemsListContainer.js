@@ -1,13 +1,15 @@
 import './ItemsListContainer.css'
+import swal from 'sweetalert2'
 
-const ItemsListContainer = (props) => {
-    console.log(props)
+const ItemsListContainer = ({greeting, subTitle}) => {
+
+  swal.fire({
+    title: `${greeting}`,
+    text: `${subTitle}`,
+  });
+
   return (
-    <div className='messageGreetingContainer'>
-        <h2 className='message'>
-            {props.name}
-        </h2>
-    </div>
+   <></>
   )
 }
 

@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <NavBar></NavBar>
-        <ItemsListContainer name='Bienvenidos a Staem'></ItemsListContainer>
+        <ItemsListContainer greeting='Bienvenidos a Staem' subTitle='Plataforma de juegos'></ItemsListContainer>
       </header>
     </div>
   );
