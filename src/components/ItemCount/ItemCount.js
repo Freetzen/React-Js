@@ -2,7 +2,7 @@ import {useState} from 'react'
 
 const ItemCount = () => {
 
-    const [contador, setContador] = useState(0);
+ /*    const [contador, setContador] = useState(0);
 
     const add = ()=>{
       setContador(contador + 1)
@@ -25,7 +25,7 @@ const ItemCount = () => {
         <button  onClick={less}>Quitar</button>
       </div>
     </div>
-  )
+  ) */
 };
 
 export default ItemCount;

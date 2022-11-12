@@ -8,10 +8,12 @@ import './App.css';
 
 function App() {
   return (
-    <>
-
+    
+<div className="App">
+ 
       <NavBar/>
       <ItemsListContainer />
+   
 {/*       <BrowserRouter>
         <Routes>
           <Route path='/' element={<ItemsListContainer/>}/>
@@ -19,7 +21,9 @@ function App() {
         </Routes>
       </BrowserRouter>
  */}
-    </>
+
+ </div>
+    
   );
 }
 

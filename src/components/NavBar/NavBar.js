@@ -1,11 +1,11 @@
 import './NavBar.css';
-import logo from'../../images/logoBlanco.png';
+import logo from'../../images/logos/logoBlanco.png';
 import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = () => {
   return (
     
-    <div className="navbar bg-base-100 flex">
+    <div className="navbar bg-base-100 flex headerNav">
         <div className="flex-5">
           <a className=" logoNavBar btn btn-ghost normal-case text-xl" href='https://www.google.com'><img src={logo}></img></a>
         </div>

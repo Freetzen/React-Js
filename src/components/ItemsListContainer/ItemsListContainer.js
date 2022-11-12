@@ -2,33 +2,34 @@ import './ItemsListContainer.css'
 import ItemList from '../ItemList/ItemList.js'
 import { useEffect, useState } from "react"
 import { data } from "../../data/data"
+import Item from '../Item/Item'
 
 
 const ItemsListContainer = () => {
 
-/*   const [productList, setProductList] = useState([]); */
+const [productList, setProductList] = useState([]);
 
+const getProducts = new Promise ((resolve, rejects)=>{
+  setTimeout(()=>{
+    resolve(data)
+  }, 2000)
+})
 
-
-
-/*   const getProducts = new Promise((resolve, reject)=>{
-    setTimeout(()=>{
-      resolve(data)
-    }, 3000)
-  })
-
-  useEffect(()=>{
-    getProducts.then(respuesta =>{
-      setProductList(respuesta)
-    })
-    setTimeout(()=>{
-      console.log(productList)
-    },4000)
-  }, []) */
+useEffect(()=>{
+  getProducts.then((respuesta)=>{
+    setProductList(respuesta)
+  });
+  setTimeout(()=>{
+  }, 2000)
+}, [productList]);
 
   return (
    <>
-   <ItemList/>
+   <div className='cardProduct'>
+
+   <ItemList productList={productList}/>
+
+   </div>
    </>
   )
 }
