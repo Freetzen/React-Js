@@ -3,6 +3,15 @@
 
 }
 
+.navbar{
+    justify-content: space-around;
+    color: white;
+}
+
+.navbar-center{
+    color: white;
+}
+
 .NavBarContainer{
     width: 100%;
     color: white;

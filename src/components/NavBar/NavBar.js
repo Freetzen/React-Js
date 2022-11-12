@@ -4,33 +4,23 @@ import CartWidget from '../CartWidget/CartWidget';
 
 const NavBar = () => {
   return (
-    <header className='headerNav'>
-
-      <nav className='NavBarContainer'>
-
-        <div>
-          <a href='#'><img className='logoNavBar' src={logo}></img></a>
+    
+    <div className="navbar bg-base-100 flex">
+        <div className="flex-5">
+          <a className=" logoNavBar btn btn-ghost normal-case text-xl" href='https://www.google.com'><img src={logo}></img></a>
         </div>
 
-        <div className='divLista'>
+      <div className="navbar-center hidden lg:flex">
+        <ul className="menu menu-horizontal p-0">
+          <li><a>Free to Play</a></li>
+          <li><a>Acción</a></li>
+          <li><a>Terror</a></li>
+        </ul>
+      </div>
+    
+      <CartWidget/>
 
-          <ul className='ulLista'>
-
-            <a href='https://www.google.com'><li>Free to Play</li></a>
-            <a href='https://www.google.com'><li>Acción</li></a>
-            <a href='https://www.google.com'><li>Aventura</li></a>
-            <a href='https://www.google.com'><li>Terror</li></a>
-          </ul>
-
-        </div>
-
-        <div>
-        <CartWidget></CartWidget>
-        </div>
-
-      </nav>
-
-    </header> 
+    </div>
 
   )
 };
