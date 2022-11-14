@@ -39,3 +39,16 @@
 .ulLista{
     display: flex;
 }
+
+.licolor li:hover{
+    color: white;
+}
+
+.active{
+    color: black;
+    background-color: white;
+}
+
+.inactive{
+    color: white;
+}

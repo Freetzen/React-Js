@@ -5,7 +5,7 @@
     height: 50px;
     margin: 30px;
 }
-
+ 
 .cardProduct{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
