@@ -2,7 +2,7 @@ import {useState} from 'react'
 
 const ItemCount = () => {
 
- /*    const [contador, setContador] = useState(0);
+const [contador, setContador] = useState(0);
 
     const add = ()=>{
       setContador(contador + 1)
@@ -21,11 +21,11 @@ const ItemCount = () => {
         {contador}
       </p>
       <div>
-        <button  onClick={add}>Agregar</button>
-        <button  onClick={less}>Quitar</button>
+      <button className='btn btn-primary' onClick={less}>Quitar</button>
+        <button className='btn btn-primary' onClick={add}>Agregar</button>
       </div>
     </div>
-  ) */
+  )
 };
 
 export default ItemCount;
