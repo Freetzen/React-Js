@@ -1,4 +1,4 @@
-import './NavBar.css';
+import './navBar.css';
 import logo from'../../images/logos/logoBlanco.png';
 import CartWidget from '../CartWidget/CartWidget';
 import { Link, NavLink } from 'react-router-dom';
@@ -8,7 +8,7 @@ const NavBar = () => {
     
     <div className="navbar bg-base-100 flex headerNav">
         <div className="flex-5">
-          <Link to='/' className=" logoNavBar btn btn-ghost normal-case text-xl" href='https://www.google.com'><img src={logo}/></Link>
+          <Link to='/' className=" logoNavBar btn btn-ghost normal-case text-xl" href='https://www.google.com'><img src={logo} alt={logo}/></Link>
         </div>
 
       <div className="navbar-center hidden lg:flex">
@@ -19,7 +19,9 @@ const NavBar = () => {
         </ul>
       </div>
     
-      <CartWidget/>
+      <NavLink className="mr-5 scaleCss nav__link btn btn-square btn-ghost" to='cart'>
+                            <CartWidget />
+                        </NavLink>
 
     </div>
 

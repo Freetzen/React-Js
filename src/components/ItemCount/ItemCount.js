@@ -1,31 +1,32 @@
-import {useState} from 'react'
+import './itemCount.css';
 
-const ItemCount = () => {
+import React,{useEffect, useState} from 'react';
 
-const [contador, setContador] = useState(0);
+export const ItemCount = ({initial, stock, onAdd}) => {
+    const [count, setCount]  = useState(parseInt(initial));
 
-    const add = ()=>{
-      setContador(contador + 1)
-      if(contador === 0){
-        return
-      }
+    const decrease = () => {
+        setCount(count - 1);
     }
 
-    const less = ()=>{
-      setContador(contador - 1)
+    const increase = () => {
+        setCount(count + 1);
     }
 
-  return (
-    <div>
-      <p>
-        {contador}
-      </p>
-      <div>
-      <button className='btn btn-primary' onClick={less}>Quitar</button>
-        <button className='btn btn-primary' onClick={add}>Agregar</button>
-      </div>
-    </div>
-  )
-};
+    useEffect(() => {
+        setCount(parseInt(initial));
+    }, [initial])
+
+    return (
+        <div className='mt-5'>
+            <button disabled={count <= 1} onClick={decrease} className="mr-2 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">-</button>
+            <span>{count}</span>
+            <button disabled={count >= stock} onClick={increase} className="ml-2 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">+</button>
+            <div>
+                <button disabled={stock <=0} onClick={() => onAdd(count)} className="mt-2 bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">Agregar al carrito</button>
+            </div>
+        </div>
+    );
+}
 
 export default ItemCount;
