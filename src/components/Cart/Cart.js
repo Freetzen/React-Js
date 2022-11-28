@@ -4,9 +4,11 @@ import React from "react";
 import { Link } from 'react-router-dom'
 import { useCartContext } from "../../context/CartContext";
 import ItemCart from "../ItemCart/ItemCart";
+import swal from 'sweetalert2'
 
 const Cart = () => {
     const { cart, totalPrice } = useCartContext();
+
 
     const order = {
         buyer: {
@@ -24,7 +26,9 @@ const Cart = () => {
         const ordersCollection = collection(db, 'orders');
         addDoc(ordersCollection, order)
             .then(({ id }) => console.log(id))
-        alert("¡Usted a emitido una orden de Compra!")
+        swal.fire({
+            title: '¡Usted a emitido una orden de Compra!'
+        });
     }
 
     if (cart.length === 0) {
