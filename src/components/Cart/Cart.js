@@ -1,4 +1,4 @@
-import './cart.css'
+import './Cart.css'
 import { addDoc, collection, getFirestore } from 'firebase/firestore';
 import React from "react";
 import { Link } from 'react-router-dom'
