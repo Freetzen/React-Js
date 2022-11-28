@@ -1,4 +1,4 @@
-import './navBar.css';
+import './NavBar.css';
 import logo from'../../images/logos/logoBlanco.png';
 import CartWidget from '../CartWidget/CartWidget';
 import { Link, NavLink } from 'react-router-dom';
